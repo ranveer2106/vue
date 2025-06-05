@@ -1,7 +1,5 @@
-<template>
-  <!-- <div
-    class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white"
-  > -->
+<!-- <template>
+
   <div
   class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white"
 >
@@ -13,7 +11,16 @@
     <p class="mt-2">Toggle the theme using the button above.</p>
     <RouterView />
   </div>
+</template> -->
+<template>
+  <div class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+    <ThemeToggle />
+    <h1 class="text-2xl font-bold mt-4">Vue 3 + TailwindCSS Dark Mode</h1>
+    <p class="mt-2">Toggle the theme using the button above.</p>
+    <RouterView/>
+  </div>
 </template>
+
 
 <script setup>
 import { RouterView } from 'vue-router'
