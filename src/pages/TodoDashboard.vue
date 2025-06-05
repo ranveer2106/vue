@@ -68,16 +68,25 @@ function add() {
   }
 }
 
+
+
 function startEdit(todo) {
   editing.value = true
   editId.value = todo.id
   editTitle.value = todo.title
 }
 
+// function saveEdit() {
+//   store.updateTodo(editId.value, editTitle.value)
+//   cancelEdit()
+// }
+
+// ...existing code...
 function saveEdit() {
-  store.updateTodo(editId.value, editTitle.value)
+  store.updateTodo(editId.value, { title: editTitle.value }) // <-- fix here
   cancelEdit()
 }
+// ...existing code...
 
 function cancelEdit() {
   editing.value = false

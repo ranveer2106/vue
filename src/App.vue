@@ -1,15 +1,24 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <div class="text-center text-3xl mt-10 text-green-600 font-bold">
-    ✅ Tailwind CSS v4 is working!
+  <!-- <div
+    class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white"
+  > -->
+  <div
+  class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white"
+>
+    <ThemeToggle />
+    <div class="bg-white dark:bg-black text-black dark:text-white p-4">
+  Test dark mode background
+</div>
+    <h1 class="text-2xl font-bold mt-4">Vue 3 + TailwindCSS Dark Mode</h1>
+    <p class="mt-2">Toggle the theme using the button above.</p>
+    <RouterView />
   </div>
-  
-
-  <RouterView />
 </template>
+
+<script setup>
+import { RouterView } from 'vue-router'
+import ThemeToggle from './components/ThemeToggle.vue'
+</script>
 
 <style scoped>
 header {

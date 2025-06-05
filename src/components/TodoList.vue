@@ -6,7 +6,6 @@
     <div v-else-if="todoStore.error" class="text-red-500">{{ todoStore.error }}</div>
 
     <div v-else>
-      <!-- To-Do Items -->
       <TodoItem
         v-for="todo in todoStore.todos"
         :key="todo.id"
@@ -59,19 +58,31 @@ const startEditing = (todo) => {
   editedTitle.value = todo.title
 }
 
+// const saveTodo = () => {
+//   if (editingTodo.value) {
+//     todoStore.updateTodo(editingTodo.value.id, editedTitle.value)
+//     editingTodo.value = null
+//     editedTitle.value = ''
+//   }
+// }
+
+// ...existing code...
 const saveTodo = () => {
   if (editingTodo.value) {
-    todoStore.updateTodo(editingTodo.value.id, editedTitle.value)
+    todoStore.updateTodo(editingTodo.value.id, { title: editedTitle.value }) // <-- fix here
     editingTodo.value = null
     editedTitle.value = ''
   }
 }
+// ...existing code...
 
 const cancelEdit = () => {
   editingTodo.value = null
   editedTitle.value = ''
 }
 </script>
+
+
 
 <style scoped>
 /* Optional: Add extra styling here */
