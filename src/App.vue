@@ -1,92 +1,29 @@
-<!-- <template>
-
-  <div
-  class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white"
->
-    <ThemeToggle />
-    <div class="bg-white dark:bg-black text-black dark:text-white p-4">
-  Test dark mode background
-</div>
-    <h1 class="text-2xl font-bold mt-4">Vue 3 + TailwindCSS Dark Mode</h1>
-    <p class="mt-2">Toggle the theme using the button above.</p>
-    <RouterView />
-  </div>
-</template> -->
 <template>
-  <div class="min-h-screen p-6 transition-colors duration-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+  <div class="app-wrapper">
     <ThemeToggle />
-    <h1 class="text-2xl font-bold mt-4">Vue 3 + TailwindCSS Dark Mode</h1>
-    <p class="mt-2">Toggle the theme using the button above.</p>
+    <!-- <h1 class="text-2xl font-bold mt-4">Vue 3 + Manual Dark/Light Mode</h1> -->
+    <!-- <p class="mt-2">Toggle the theme using the button above.</p> -->
     <RouterView/>
   </div>
 </template>
-
 
 <script setup>
 import { RouterView } from 'vue-router'
 import ThemeToggle from './components/ThemeToggle.vue'
 </script>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+.app-wrapper {
+  min-height: 100vh;
+  padding: 1.5rem;
+  transition: background 0.3s, color 0.3s;
+  background: #fff;
+  color: #181818;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+/* Dark mode styles */
+html.dark .app-wrapper {
+  background: #181818;
+  color: #f8f8f8;
 }
 </style>
