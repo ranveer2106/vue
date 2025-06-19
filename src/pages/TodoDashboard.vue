@@ -51,6 +51,8 @@ import { ref, onMounted } from 'vue'
 import { useTodoStore } from '../store/todos'
 import TodoItem from '../components/TodoItem.vue'
 
+
+
 const store = useTodoStore()
 const title = ref('')
 const editing = ref(false)
@@ -76,17 +78,11 @@ function startEdit(todo) {
   editTitle.value = todo.title
 }
 
-// function saveEdit() {
-//   store.updateTodo(editId.value, editTitle.value)
-//   cancelEdit()
-// }
 
-// ...existing code...
 function saveEdit() {
-  store.updateTodo(editId.value, { title: editTitle.value }) // <-- fix here
+  store.updateTodo(editId.value, { title: editTitle.value })  
   cancelEdit()
 }
-// ...existing code...
 
 function cancelEdit() {
   editing.value = false

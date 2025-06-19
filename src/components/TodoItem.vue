@@ -38,6 +38,4 @@ const remove = (id) => {
 }
 </script>
 
-<style scoped>
-/* Optional: Scoped styles for better appearance */
-</style>
+

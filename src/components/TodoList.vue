@@ -13,7 +13,6 @@
         @edit="startEditing"
       />
 
-      <!-- Edit Panel -->
       <div v-if="editingTodo" class="mt-6 p-4 bg-gray-100 rounded-lg shadow">
         <h3 class="text-lg font-semibold mb-2">Edit Task</h3>
         <input
@@ -58,23 +57,14 @@ const startEditing = (todo) => {
   editedTitle.value = todo.title
 }
 
-// const saveTodo = () => {
-//   if (editingTodo.value) {
-//     todoStore.updateTodo(editingTodo.value.id, editedTitle.value)
-//     editingTodo.value = null
-//     editedTitle.value = ''
-//   }
-// }
 
-// ...existing code...
 const saveTodo = () => {
   if (editingTodo.value) {
-    todoStore.updateTodo(editingTodo.value.id, { title: editedTitle.value }) // <-- fix here
+    todoStore.updateTodo(editingTodo.value.id, { title: editedTitle.value })
     editingTodo.value = null
     editedTitle.value = ''
   }
 }
-// ...existing code...
 
 const cancelEdit = () => {
   editingTodo.value = null
@@ -84,6 +74,4 @@ const cancelEdit = () => {
 
 
 
-<style scoped>
-/* Optional: Add extra styling here */
-</style>
+

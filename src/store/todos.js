@@ -7,7 +7,7 @@ export const useTodoStore = defineStore('todo', {
     loading: false,
     error: null,
     searchQuery: '',
-    filterStatus: 'all' // all | completed | pending
+    filterStatus: 'all' 
   }),
 
   getters: {
@@ -95,10 +95,10 @@ export const useTodoStore = defineStore('todo', {
 
         try {
           const res = await axios.put(`https://jsonplaceholder.typicode.com/todos/${todoId}`, payload)
-         
+
 
           console.log('Simulated update:', res.data)
-        
+
 
         } catch (error) {
           console.error('PUT error:', error)

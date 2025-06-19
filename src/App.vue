@@ -1,8 +1,6 @@
 <template>
   <div class="app-wrapper">
     <ThemeToggle />
-    <!-- <h1 class="text-2xl font-bold mt-4">Vue 3 + Manual Dark/Light Mode</h1> -->
-    <!-- <p class="mt-2">Toggle the theme using the button above.</p> -->
     <RouterView/>
   </div>
 </template>
@@ -21,7 +19,6 @@ import ThemeToggle from './components/ThemeToggle.vue'
   color: #181818;
 }
 
-/* Dark mode styles */
 html.dark .app-wrapper {
   background: #181818;
   color: #f8f8f8;
