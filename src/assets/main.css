@@ -1,12 +1,14 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px; */
+  width: 100%;
+  /* margin: 0 auto; */
   /* padding: 2rem; */
   font-weight: normal;
 }
 
+/* Only keep custom link styles if needed */
 a,
 .green {
   text-decoration: none;
@@ -27,20 +29,20 @@ a,
     place-items: center;
   }
 
-  #app {
+  /* #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
-  }
+  } */
 }
 
-
+/* Remove or comment out these global background and color rules */
 body {
-  background: #fff;
-  color: #181818;
+  /* background: #fff; */
+  /* color: #181818; */
   transition: background 0.3s, color 0.3s;
 }
-html.dark body {
-  background: #181818;
-  color: #f8f8f8;
-}
+/* html.dark body { */
+  /* background: #181818; */
+  /* color: #f8f8f8; */
+/* } */

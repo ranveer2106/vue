@@ -1,7 +1,5 @@
 <template>
-  <div class="!p-32 !m-40 !bg-green-300 text-center text-xl font-bold rounded">
-        If this box is green with padding, Tailwind CSS is working!
-      </div>
+  
   <div class="p-6 max-w-3xl gap-2 mx-auto">
     <h1 class="text-2xl font-bold mb-4">To-Do Dashboard</h1>
 

@@ -2,9 +2,7 @@
   <div class="flex justify-center items-center h-screen bg-gray-100">
     <form @submit.prevent="handleLogin" class="bg-white p-6 rounded-lg shadow-md w-80 space-y-4">
       <h2 class="text-xl font-bold text-center">Login</h2>
-      <div class="p-8 bg-green-300 text-center text-xl font-bold rounded">
-        If this box is green with padding, Tailwind CSS is working!
-      </div>
+      
       <div class="flex">
         <div>
           <input

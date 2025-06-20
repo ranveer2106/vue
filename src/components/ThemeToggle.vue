@@ -1,5 +1,8 @@
 <template>
-  <button @click="toggleTheme" class="theme-toggle-btn">
+  <button
+    @click="toggleTheme"
+    class="p-2 rounded font-semibold bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-100 transition-colors duration-300"
+  >
     {{ isDark ? '🌙 Dark Mode' : '☀️ Light Mode' }}
   </button>
 </template>
@@ -10,11 +13,7 @@ import { ref, onMounted } from 'vue'
 const isDark = ref(false)
 
 function setHtmlClass(dark) {
-  if (dark) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+  document.documentElement.classList.toggle('dark', dark)
 }
 
 onMounted(() => {
@@ -35,19 +34,3 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
 </script>
-
-<style scoped>
-.theme-toggle-btn {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 0.375rem;
-  background: #e5e7eb;
-  color: #222;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.theme-toggle-btn:hover {
-  background: #d1d5db;
-}
-</style>
