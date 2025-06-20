@@ -1,5 +1,8 @@
 <template>
-  <div class="p-6 max-w-3xl mx-auto">
+  <div class="!p-32 !m-40 !bg-green-300 text-center text-xl font-bold rounded">
+        If this box is green with padding, Tailwind CSS is working!
+      </div>
+  <div class="p-6 max-w-3xl gap-2 mx-auto">
     <h1 class="text-2xl font-bold mb-4">To-Do Dashboard</h1>
 
     <div class="mb-4 flex gap-2">
@@ -13,7 +16,7 @@
       <button @click="add" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Add</button>
     </div>
 
-    <div class="flex gap-2 mb-4">
+    <div class="flex  gap-2 m-20">
       <input
         v-model="store.searchQuery"
         type="text"
@@ -80,7 +83,7 @@ function startEdit(todo) {
 
 
 function saveEdit() {
-  store.updateTodo(editId.value, { title: editTitle.value })  
+  store.updateTodo(editId.value, { title: editTitle.value })
   cancelEdit()
 }
 

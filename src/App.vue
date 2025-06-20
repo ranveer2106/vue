@@ -1,7 +1,11 @@
 <template>
-  <div class="app-wrapper">
+  <div class="app-wrapper !w-full">
+    <!-- <div class="p-8 bg-green-300 text-center text-xl font-bold rounded">
+      If this box is green with padding, Tailwind CSS is working!
+    </div> -->
+
     <ThemeToggle />
-    <RouterView/>
+    <RouterView />
   </div>
 </template>
 
@@ -14,8 +18,10 @@ import ThemeToggle from './components/ThemeToggle.vue'
 .app-wrapper {
   min-height: 100vh;
   padding: 1.5rem;
-  transition: background 0.3s, color 0.3s;
-  background: #fff;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  /* background: #fff; */
   color: #181818;
 }
 

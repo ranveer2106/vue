@@ -2,8 +2,27 @@
   <div class="flex justify-center items-center h-screen bg-gray-100">
     <form @submit.prevent="handleLogin" class="bg-white p-6 rounded-lg shadow-md w-80 space-y-4">
       <h2 class="text-xl font-bold text-center">Login</h2>
-      <input v-model="email" type="email" placeholder="Email" class="w-full border p-2 rounded" />
-      <input v-model="password" type="password" placeholder="Password" class="w-full border p-2 rounded" />
+      <div class="p-8 bg-green-300 text-center text-xl font-bold rounded">
+        If this box is green with padding, Tailwind CSS is working!
+      </div>
+      <div class="flex">
+        <div>
+          <input
+            v-model="email"
+            type="email"
+            placeholder="Email"
+            class="w-full border p-4 rounded"
+          />
+        </div>
+        <div>
+          <input
+            v-model="password"
+            type="password"
+            placeholder="Password"
+            class="w-full border p-4 rounded"
+          />
+        </div>
+      </div>
       <button class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Login</button>
       <p v-if="error" class="text-red-500 text-sm text-center">Invalid credentials</p>
     </form>

@@ -85,11 +85,11 @@ body {
 
 
 body {
-  background: #fff;
-  color: #181818;
+  /* background: #fff; */
+  /* color: #181818; */
   transition: background 0.3s, color 0.3s;
 }
-html.dark body {
+/* html.dark body {
   background: #181818;
   color: #f8f8f8;
-}
+} */
