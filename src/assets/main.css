@@ -8,6 +8,22 @@
   font-weight: normal;
 }
 
+.logins{
+  flex-direction: column;
+}
+
+.logininp{
+  width: 100%;
+  margin-top: 1rem;
+}
+.inputs{
+  padding:0.5rem 1rem;
+}
+
+.loginbtn{
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
 /* Only keep custom link styles if needed */
 a,
 .green {
